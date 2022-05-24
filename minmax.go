@@ -18,39 +18,39 @@ type minmax interface {
 type minMaxer = func(min int, max int) int
 
 // EvenMinMax is a MinMaxer with even distribution
-func (r *api) EvenMinMax(min int, max int) int {
+func (r *Random) EvenMinMax(min int, max int) int {
 	return min + r.powMinMax(min, max, 1.0)
 }
 
 // IncExpMinMax is a MinMaxer with increasing exponential distribution
 // where numbers towards the minimum are less likely than numbers
 // towards the maximum
-func (r *api) IncExpMinMax(min int, max int) int {
+func (r *Random) IncExpMinMax(min int, max int) int {
 	return min + r.powMinMax(min, max, 2.0)
 }
 
 // IncCubMinMax is a MinMaxer with increasing cubic distribution
 // where numbers towards the minimum are less likely than numbers
 // towards the maximum
-func (r *api) IncCubMinMax(min int, max int) int {
+func (r *Random) IncCubMinMax(min int, max int) int {
 	return min + r.powMinMax(min, max, 3.0)
 }
 
 // DecExpMinMax is a MinMaxer with decreasing exponential distribution
 // where numbers towards the minimum are more likely than numbers
 // towards the minimum
-func (r *api) DecExpMinMax(min int, max int) int {
+func (r *Random) DecExpMinMax(min int, max int) int {
 	return max - 1 - r.powMinMax(min, max, 2.0)
 }
 
 // DecCubMinMax is a MinMaxer with decreasing cubic distribution
 // where numbers towards the minimum are more likely than numbers
 // towards the minimum
-func (r *api) DecCubMinMax(min int, max int) int {
+func (r *Random) DecCubMinMax(min int, max int) int {
 	return max - 1 - r.powMinMax(min, max, 3.0)
 }
 
-func (r *api) powMinMax(min int, max int, pow float64) int {
+func (r *Random) powMinMax(min int, max int, pow float64) int {
 	diff := max - min
 	diffToPow := int(math.Pow(float64(diff), pow))
 	randPowDiff := float64(r.Intn(diffToPow))

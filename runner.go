@@ -2,14 +2,13 @@ package erand
 
 import (
 	"fmt"
-	"math/rand"
 	"time"
 )
 
 // RunMinMaxers runs all the MinMaxer functions through a simulation
 // and outputs the results in buckets of frequency
 func RunMinMaxers() {
-	r := New(rand.NewSource(time.Now().UTC().UnixNano()))
+	r := New(time.Now().UTC().UnixNano())
 
 	arr := [...]minMaxer{r.EvenMinMax, r.IncExpMinMax, r.DecExpMinMax, r.IncCubMinMax, r.DecCubMinMax}
 

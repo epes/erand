@@ -1,0 +1,6 @@
+github.com/epes/gosplitmix64 v0.0.0-20220523023929-a8d49d930ee6 h1:Kz+jWVb2EvWMaGJWSjNJAZUnLnuGaZPNaWqHOfN6gFM=
+github.com/epes/gosplitmix64 v0.0.0-20220523023929-a8d49d930ee6/go.mod h1:eElI+PGHQGAJag6NlpfGN+O3YCQUgBbt44+rlBjH8R8=
+github.com/epes/goxoshiro256starstar v0.0.0-20220523031900-5e4a0e4a3147 h1:x6DumLEtL4k3MyTxgqjxuFuU7OAjep9d8cDsjdjp6RA=
+github.com/epes/goxoshiro256starstar v0.0.0-20220523031900-5e4a0e4a3147/go.mod h1:bLV0XlbiZbA0vKyP3BVV4+aehNJv+0fulfkofbyD7oE=
+github.com/epes/goxoshiro256starstar v0.0.0-20220524015553-b6cd41a9059d h1:lCddwnM4fV9M+Y7e/pnmWbyphaFlOveV0+PVQa30/zs=
+github.com/epes/goxoshiro256starstar v0.0.0-20220524015553-b6cd41a9059d/go.mod h1:bLV0XlbiZbA0vKyP3BVV4+aehNJv+0fulfkofbyD7oE=
